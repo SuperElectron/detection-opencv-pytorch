@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "opencv-detection"
+version = "1.0.0"
+description = "Sample"
+authors = ["Matthew McCann <matmccann@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+opencv-python = "^4.7.0.68"
+poethepoet = "^0.18.1"
+confluent_kafka= "^2.3.0"
+pydantic = {extras = ["dotenv"], version = "^1.10.5"}
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+install-deps = "python -m pip install -qr https://raw.githubusercontent.com/ultralytics/yolov5/master/requirements.txt"
+install = "python -m pip install torch==1.13.1 torchvision==0.14.1 -f https://download.pytorch.org/whl/cu102/torch_stable.html"

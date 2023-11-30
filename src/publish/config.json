@@ -1,0 +1,7 @@
+{
+  "bootstrap": {
+    "bootstrap.servers": "kafka:9092",
+    "client.id": "Null"
+  },
+  "topic": "test"
+}
